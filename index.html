@@ -3,198 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>地域創生プロ育成《初級》講座 | 100名限定プロジェクト、始動</title>
+    <title>地域創生プロ育成《初級》講座｜説明会</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Base styles for body and font */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8f8f8; /* Light gray background */
+            background-color: #f8fcf8; /* Very light green/off-white for a clean look */
+            color: #2c3e50; /* Darker gray for better contrast and sophistication */
         }
-        .container {
-            max-width: 960px; /* Max width for content */
+        /* Gradient background for the main container */
+        .gradient-bg {
+            background: linear-gradient(135deg, #e6ffe6 0%, #c8f0c8 100%); /* Softer, more refined green gradient */
         }
-        .section-heading {
-            border-left: 6px solid #3b82f6; /* Blue border for headings */
-            padding-left: 1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-        .button-primary {
-            background-color: #3b82f6; /* Blue background for button */
+        /* Primary button styling */
+        .btn-primary {
+            background-color: #28a745; /* A more vibrant, professional green */
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
+            padding: 1.2rem 2.8rem; /* Slightly larger padding */
+            border-radius: 9999px; /* Fully rounded */
+            font-weight: 700;
+            transition: all 0.3s ease; /* Smooth transition for all properties */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+            letter-spacing: 0.05em; /* Slightly increased letter spacing */
+            text-transform: uppercase; /* Uppercase for a modern feel */
         }
-        .button-primary:hover {
-            background-color: #2563eb; /* Darker blue on hover */
+        .btn-primary:hover {
+            background-color: #218838; /* Darker green on hover */
+            transform: translateY(-3px) scale(1.02); /* Lift and slightly scale on hover */
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25); /* More pronounced shadow on hover */
         }
-        .rounded-box {
+        /* Section heading styling */
+        .section-heading {
+            font-size: 2.5rem; /* text-5xl for more impact */
+            font-weight: 800; /* font-extrabold */
+            color: #1a5e20; /* Deep forest green for headings */
+            margin-bottom: 2rem; /* Increased margin */
+            text-align: center;
+            position: relative; /* For potential pseudo-elements */
+        }
+        .section-heading::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #28a745; /* Accent color under heading */
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+        /* Card styling */
+        .card {
             background-color: white;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border-radius: 1.5rem; /* rounded-3xl */
+            padding: 2.5rem; /* Increased padding */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+            border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+        }
+        /* Highlight box for important dates */
+        .highlight-box {
+            background-color: #fffbe6; /* Softer yellow */
+            border-left: 5px solid #ffc107; /* Golden yellow border */
+            color: #6a5a00; /* Darker, sophisticated yellow text */
+            padding: 1.8rem; /* Increased padding */
+            border-radius: 0.75rem; /* Slightly rounded corners */
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+        }
+        /* List item styling for details sections */
+        .detail-list li {
+            position: relative;
+            padding-left: 1.8rem; /* Space for custom bullet */
+            margin-bottom: 1rem;
+        }
+        .detail-list li::before {
+            content: '•'; /* Custom bullet point */
+            color: #28a745; /* Green bullet */
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 0;
+            line-height: 1.2;
         }
     </style>
 </head>
-<body class="text-gray-800">
-    <header class="bg-blue-600 text-white py-6 shadow-md">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-3xl sm:text-4xl font-bold mb-2 leading-tight">
-                地域創生プロ育成《初級》講座
+<body class="antialiased">
+    <div class="min-h-screen flex flex-col items-center py-16 px-4 sm:px-8 lg:px-12 gradient-bg">
+
+        <header class="text-center max-w-5xl mx-auto mb-16">
+            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
+                <span class="text-green-600">🌱</span> 地域創生プロ育成《初級》講座
             </h1>
-            <p class="text-xl sm:text-2xl font-semibold">
-                100名限定プロジェクト、始動
-            </p>
-        </div>
-    </header>
-
-    <main class="container mx-auto px-4 py-8 sm:py-12">
-        <section class="text-center mb-10 sm:mb-16">
-            <p class="text-xl sm:text-2xl font-bold text-red-600 mb-4">
-                ＼政策や補助金ありきでは、もう地域は救えない／
-            </p>
-            <h2 class="text-2xl sm:text-3xl font-bold leading-relaxed">
-                地域創生の“本質”を実装する人材を育てるために。<br>
-                東京山側DMCは、全国100名限定の無料講座「地域創生プロ育成《初級》講座」を開講します。
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-700 mb-8">
+                100名限定プロジェクト説明会
             </h2>
-        </section>
-
-        <section class="mb-10 sm:mb-16 rounded-box">
-            <h3 class="section-heading text-2xl font-bold mb-6">なぜ今、この講座が必要なのか？</h3>
-            <p class="mb-4 text-lg leading-relaxed">
-                多くの地域が、従来のやり方では活路を見出せない状況にあります。
-                私たちは、目先の成果や一時的な賑わいではなく、その土地ならではの魅力を深く理解し、持続可能な形で未来へつなぐことこそが、真の地域創生だと考えます。
+            <p class="text-xl sm:text-2xl text-gray-800 mb-10 leading-relaxed">
+                “地域を変える力”を、本気で身につけたいあなたへ
             </p>
-            <p class="text-xl sm:text-2xl font-bold text-blue-700 leading-relaxed">
-                必要なのは、“風土を読み解き、価値に変え、未来へつなぐ”人。
-            </p>
-            <p class="mt-4 text-lg leading-relaxed">
-                この講座では、観光・教育・自然・産業といった分野を横断しながら、
-                <strong class="text-blue-600">「風土経営」</strong>という新しい視点で地域と関わる力を育てます。
-            </p>
-        </section>
-
-        <section class="mb-10 sm:mb-16 rounded-box">
-            <h3 class="section-heading text-2xl font-bold mb-6">講座概要</h3>
-            <p class="mb-6 text-lg leading-relaxed">
-                本講座は、地域創生の最前線で活躍するための土台を築くためのプログラムです。
-            </p>
-            <ul class="list-disc list-inside space-y-3 text-lg">
-                <li>
-                    <strong>内容：</strong> 全4回のオンライン講座 ＋ フィールドワーク
-                    <ul class="list-disc list-inside ml-6 mt-1 text-base text-gray-700">
-                        <li>地域創生の概論から、風土の読み解き方、具体的なアクションプランの策定までを網羅的に学びます。</li>
-                        <li>フィールドワークでは、実際に地域を訪れ、五感で風土を体感し、実践的なスキルを磨きます。（※詳細はミートアップにてご説明します）</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>受講料：</strong> <strong class="text-red-600">無料</strong>（※教材費のみ実費をご負担いただきます）
-                </li>
-                <li>
-                    <strong>定員：</strong> 全国から<strong class="text-red-600">100名限定</strong>
-                </li>
-                <li>
-                    <strong>ステップアップ制度：</strong>
-                    <ul class="list-disc list-inside ml-6 mt-1 text-base text-gray-700">
-                        <li>《初級》講座修了後は、より専門的なスキルを習得する<strong>「2級（実装者編）」</strong>へ。</li>
-                        <li>さらに、地域創生の担い手を育成する<strong>「1級（講師編）」</strong>へと進級可能です。あなたの情熱と行動力次第で、地域を牽引するリーダーへと成長できます。</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <section class="text-center mb-10 sm:mb-16 rounded-box bg-blue-50">
-            <h3 class="section-heading text-2xl font-bold mb-6 text-left">参加方法：まずは、私たちと話しませんか？</h3>
-            <p class="mb-6 text-lg leading-relaxed text-left">
-                本講座は、単なる知識の提供だけを目的としていません。<br>
-                受講を希望される方には、まず<strong class="text-blue-600">「対話型ミートアップ（オンライン）」</strong>へのご参加をお願いしています。
-            </p>
-            <p class="mb-8 text-lg leading-relaxed text-left">
-                このミートアップは、選考の場ではありません。<br>
-                私たちと直接対話し、お互いにとっての“地域創生の意味”や目指す未来について語り合う場です。<br>
-                あなたの想いを聞かせてください。そして、私たちのビジョンに共感いただけるか、確かめてください。
-            </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScBYX0o8bR2zPGZSD6E4EK3J2eqyXwQaSZu4tJp7xLvIU-sYQ/viewform" target="_blank" rel="noopener noreferrer" class="inline-block button-primary text-xl sm:text-2xl">
-                ▼対話型ミートアップ（オンライン）申込フォームはこちら
+            <div class="highlight-box mb-12 mx-auto max-w-3xl">
+                <p class="text-xl sm:text-2xl font-semibold">
+                    <span class="text-yellow-600">🌟</span> 6月9日10日11日、説明会開催！<br>
+                    全国100名限定・受講料無料（<span class="font-bold text-red-600">※テキスト代5,000円</span>）の<br>
+                    「地域創生プロ育成《初級》講座」の全貌を初公開します。
+                </p>
+            </div>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScBYX0o8bR2zPGZSD6E4EK3J2eqyXwQaSZu4tJp7xLvIU-sYQ/viewform"
+               class="btn-primary inline-block text-lg sm:text-xl">
+                今すぐ説明会に申し込む！
             </a>
+        </header>
+
+        <section class="max-w-4xl mx-auto mb-16 text-center card">
+            <p class="text-xl sm:text-2xl leading-relaxed mb-8">
+                政策や補助金だけに頼らない、<span class="font-bold text-green-700">本質的な地域づくり。</span><br>
+                観光・教育・自然・産業を横断する<span class="font-bold text-green-700">実践型のカリキュラム。</span><br>
+                そして、将来的には<span class="font-bold text-green-700">国家資格化も視野に入れた挑戦。</span>
+            </p>
+            <p class="text-2xl sm:text-3xl italic font-medium text-gray-700 mb-6">
+                「風土を読み解き、価値に変え、未来へつなぐ」
+            </p>
+            <p class="text-xl sm:text-2xl leading-relaxed mt-4">
+                そんな人材を本気で育てるために、今この場をつくりました。
+            </p>
         </section>
 
-        <section class="mb-10 sm:mb-16 rounded-box">
-            <h3 class="section-heading text-2xl font-bold mb-6">こんな方のご参加を心よりお待ちしています！</h3>
-            <ul class="list-disc list-inside space-y-3 text-lg">
+        <section class="max-w-4xl mx-auto mb-16 w-full card">
+            <h3 class="section-heading">
+                <span class="text-green-600">📍</span> 講座開催概要
+            </h3>
+            <ul class="text-lg sm:text-xl space-y-5 detail-list">
                 <li>
-                    <strong>今の地域づくりに、どこか違和感や限界を感じている方</strong>
+                    <span class="font-semibold">講座名：</span>地域創生プロ育成《初級》講座
                 </li>
                 <li>
-                    観光、教育、産業といった枠組みを超え、<strong class="text-blue-600">“風土”という本質的な視点から地域と関わりたい方</strong>
+                    <span class="font-semibold">形式：</span>オンライン講座（全4回）
                 </li>
                 <li>
-                    将来的には、<strong class="text-blue-600">本気でDMC（Destination Management Company/Corporation）を立ち上げ、地域経営を担いたいという熱意のある方</strong>
+                    <span class="font-semibold">受講料：</span>無料（<span class="font-bold text-red-600">※テキスト代 5,000円</span>）
                 </li>
                 <li>
-                    私たちと一緒に、<strong class="text-blue-600">次世代の地域経営のあり方を模索し、共創していきたいという仲間</strong>
+                    <span class="font-semibold">募集枠：</span>全国100名限定（選考あり）
+                </li>
+                <li>
+                    <span class="font-semibold">今後の展開：</span>2級・1級への発展、国家資格化構想あり
                 </li>
             </ul>
         </section>
 
-        <section class="mb-10 sm:mb-16 rounded-box bg-gray-100 p-6 sm:p-8">
-            <h3 class="section-heading text-2xl font-bold mb-6">主催者メッセージ</h3>
-            <blockquote class="italic text-lg leading-relaxed text-gray-700 border-l-4 border-gray-400 pl-4 py-2">
-                <p class="mb-3">
-                    この国には、世界に誇れる多様な“風土”があります。
-                    しかし、そのかけがえのない価値を活かし、未来へつなぐためには、
-                </p>
-                <p class="mb-3 font-semibold text-blue-700">
-                    “見える人”（風土の本質を見抜く洞察力を持つ人）<br>
-                    “動かせる人”（アイデアを形にし、周囲を巻き込む実行力を持つ人）<br>
-                    “つなげられる人”（多様な関係者と連携し、持続的な仕組みを構築できる人）
-                </p>
-                <p class="mb-3">
-                    が、日本各地に必要です。
-                </p>
-                <p class="mb-3">
-                    私たちは、そんな志を持つ仲間を全国から100名育て、
-                    次世代の地域創生をともに切り拓いていきたいと強く願っています。
-                    そのための、大切な第一歩が、この《初級》講座です。
-                </p>
-                <p>
-                    あなたの熱意と出会えることを、心から楽しみにしています。
-                </p>
-            </blockquote>
-            <p class="text-right mt-6 text-xl font-semibold text-gray-900">
-                — 株式会社東京山側DMC 代表取締役 宮入正陽
-            </p>
-        </section>
-
-        <section class="text-center mb-10 sm:mb-16">
-            <div class="flex flex-wrap justify-center gap-3 text-blue-700 font-medium text-lg">
-                <span class="bg-blue-100 rounded-full px-4 py-1">#地域創生</span>
-                <span class="bg-blue-100 rounded-full px-4 py-1">#DMC</span>
-                <span class="bg-blue-100 rounded-full px-4 py-1">#風土経営</span>
-                <span class="bg-blue-100 rounded-full px-4 py-1">#地域の未来は自分たちでつくる</span>
-                <span class="bg-blue-100 rounded-full px-4 py-1">#地域づくり</span>
-                <span class="bg-blue-100 rounded-full px-4 py-1">#人材育成</span>
-                <span class="bg-blue-100 rounded-full px-4 py-1">#風土を届ける仕事</span>
+        <section class="max-w-4xl mx-auto mb-16 w-full card">
+            <h3 class="section-heading">
+                <span class="text-green-600">📢</span> 説明会 詳細
+            </h3>
+            <ul class="text-lg sm:text-xl space-y-5 detail-list">
+                <li>
+                    <span class="font-semibold">日時：</span><br>
+                    6月9日（月）20:00〜21:00<br>
+                    6月10日（火）20:00〜21:00<br>
+                    6月11日（水）20:00〜21:00
+                </li>
+                <li>
+                    <span class="font-semibold">形式：</span>Zoom（オンライン開催）／参加無料
+                </li>
+                <li>
+                    <span class="font-semibold">内容：</span>講座概要・カリキュラム・選考について・質疑応答
+                </li>
+            </ul>
+            <div class="text-center mt-12">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScBYX0o8bR2zPGZSD6E4EK3J2eqyXwQaSZu4tJp7xLvIU-sYQ/viewform"
+                   class="btn-primary inline-block text-lg sm:text-xl">
+                    🔗 参加申込はこちら（当日申込OK！）
+                </a>
             </div>
         </section>
 
-        <section class="text-center mb-10 sm:mb-16">
-            <p class="text-lg mb-4">
-                さらに詳しい情報や活動の様子は、Facebookページをご覧ください！
+        <footer class="text-center max-w-2xl mx-auto mt-12 card">
+            <p class="text-xl sm:text-2xl leading-relaxed text-gray-800">
+                <span class="text-green-600">🌿</span><span class="font-bold">「地域を変えたい」と思ったその気持ちが、第一歩です。</span><br>
+                画面越しにお会いできるのを楽しみにしています！
             </p>
-            <a href="https://www.facebook.com/share/p/1AZStPtYmx/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="inline-block button-primary text-xl">
-                Facebookページはこちら
-            </a>
-        </section>
-    </main>
+        </footer>
 
-    <footer class="bg-gray-800 text-white py-6 text-center text-sm">
-        <div class="container mx-auto px-4">
-            &copy; 2023 東京山側DMC. All rights reserved.
-        </div>
-    </footer>
+    </div>
 </body>
 </html>
