@@ -3,185 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>地域創生プロ育成《初級》講座｜説明会</title>
+    <title>第18回はればれ竹クラブ作品展のご案内</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutral & Bamboo Green -->
+    <!-- Application Structure Plan: A single-page, top-down narrative structure designed for clarity and elegance. The flow guides the user from a captivating introduction (Hero) to the core invitation, then to interactive details (Schedule), practical information (Venue/Map), and finally a visual teaser (Gallery). This structure was chosen because the source content is a straightforward announcement, best presented as a beautiful, linear story rather than a complex dashboard. The goal is to make finding essential information effortless and enjoyable. -->
+    <!-- Visualization & Content Choices: Event Details -> Goal: Inform -> Method: Styled Cards with Icons -> Interaction: None -> Justification: Quick, scannable display of core info. | Schedule -> Goal: Organize/Clarify -> Method: Clickable Day Buttons -> Interaction: JS updates a text field with hours for the selected day -> Justification: Interactive clarification of varying times is more engaging and less error-prone than a static list. | Venue -> Goal: Locate -> Method: Styled Link to Map -> Interaction: Click opens Google Maps -> Justification: Provides practical, real-world utility. | Gallery -> Goal: Inspire/Set Tone -> Method: Static Image Grid -> Interaction: None -> Justification: Provides visual context for the craft without needing actual exhibit photos. All visual elements are created with HTML/CSS/Unicode, no charts needed. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
-        /* Base styles for body and font */
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fcf8; /* Very light green/off-white for a clean look */
-            color: #2c3e50; /* Darker gray for better contrast and sophistication */
+            font-family: 'Noto Serif JP', serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
-        /* Gradient background for the main container */
-        .gradient-bg {
-            background: linear-gradient(135deg, #e6ffe6 0%, #c8f0c8 100%); /* Softer, more refined green gradient */
+        .bg-bamboo-pattern {
+            background-color: #fdfcf8;
+            background-image:
+                linear-gradient(135deg, #e5e7eb 25%, transparent 25%),
+                linear-gradient(225deg, #e5e7eb 25%, transparent 25%),
+                linear-gradient(45deg, #e5e7eb 25%, transparent 25%),
+                linear-gradient(315deg, #e5e7eb 25%, #fdfcf8 25%);
+            background-position: 10px 0, 10px 0, 0 0, 0 0;
+            background-size: 20px 20px;
+            background-repeat: repeat;
         }
-        /* Primary button styling */
-        .btn-primary {
-            background-color: #28a745; /* A more vibrant, professional green */
-            color: white;
-            padding: 1.2rem 2.8rem; /* Slightly larger padding */
-            border-radius: 9999px; /* Fully rounded */
-            font-weight: 700;
-            transition: all 0.3s ease; /* Smooth transition for all properties */
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow */
-            letter-spacing: 0.05em; /* Slightly increased letter spacing */
-            text-transform: uppercase; /* Uppercase for a modern feel */
-        }
-        .btn-primary:hover {
-            background-color: #218838; /* Darker green on hover */
-            transform: translateY(-3px) scale(1.02); /* Lift and slightly scale on hover */
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25); /* More pronounced shadow on hover */
-        }
-        /* Section heading styling */
-        .section-heading {
-            font-size: 2.5rem; /* text-5xl for more impact */
-            font-weight: 800; /* font-extrabold */
-            color: #1a5e20; /* Deep forest green for headings */
-            margin-bottom: 2rem; /* Increased margin */
-            text-align: center;
-            position: relative; /* For potential pseudo-elements */
-        }
-        .section-heading::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: #28a745; /* Accent color under heading */
-            margin: 0.5rem auto 0;
-            border-radius: 2px;
-        }
-        /* Card styling */
-        .card {
-            background-color: white;
-            border-radius: 1.5rem; /* rounded-3xl */
-            padding: 2.5rem; /* Increased padding */
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
-            border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
-        }
-        /* Highlight box for important dates */
-        .highlight-box {
-            background-color: #fffbe6; /* Softer yellow */
-            border-left: 5px solid #ffc107; /* Golden yellow border */
-            color: #6a5a00; /* Darker, sophisticated yellow text */
-            padding: 1.8rem; /* Increased padding */
-            border-radius: 0.75rem; /* Slightly rounded corners */
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
-        }
-        /* List item styling for details sections */
-        .detail-list li {
-            position: relative;
-            padding-left: 1.8rem; /* Space for custom bullet */
-            margin-bottom: 1rem;
-        }
-        .detail-list li::before {
-            content: '•'; /* Custom bullet point */
-            color: #28a745; /* Green bullet */
-            font-size: 1.5em;
-            position: absolute;
-            left: 0;
-            top: 0;
-            line-height: 1.2;
+        .active-day {
+            background-color: #14532d;
+            color: #ffffff;
+            border-color: #14532d;
         }
     </style>
 </head>
-<body class="antialiased">
-    <div class="min-h-screen flex flex-col items-center py-16 px-4 sm:px-8 lg:px-12 gradient-bg">
+<body class="bg-stone-50 text-stone-800">
 
-        <header class="text-center max-w-5xl mx-auto mb-16">
-            <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-gray-900 leading-tight mb-6">
-                <span class="text-green-600">🌱</span> 地域創生プロ育成《初級》講座
-            </h1>
-            <h2 class="text-3xl sm:text-4xl font-bold text-gray-700 mb-8">
-                100名限定プロジェクト説明会
-            </h2>
-            <p class="text-xl sm:text-2xl text-gray-800 mb-10 leading-relaxed">
-                “地域を変える力”を、本気で身につけたいあなたへ
-            </p>
-            <div class="highlight-box mb-12 mx-auto max-w-3xl">
-                <p class="text-xl sm:text-2xl font-semibold">
-                    <span class="text-yellow-600">🌟</span> 6月9日10日11日、説明会開催！<br>
-                    全国100名限定・受講料無料（<span class="font-bold text-red-600">※テキスト代5,000円</span>）の<br>
-                    「地域創生プロ育成《初級》講座」の全貌を初公開します。
-                </p>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScBYX0o8bR2zPGZSD6E4EK3J2eqyXwQaSZu4tJp7xLvIU-sYQ/viewform"
-               class="btn-primary inline-block text-lg sm:text-xl">
-                今すぐ説明会に申し込む！
-            </a>
+    <div class="max-w-4xl mx-auto">
+
+        <!-- Header Section -->
+        <header class="text-center py-16 px-4 bg-bamboo-pattern">
+            <h1 class="text-4xl md:text-5xl font-bold text-green-900 tracking-wider">第18回 はればれ竹クラブ作品展</h1>
+            <p class="mt-4 text-lg text-stone-600">心を込めて編んだ、竹のぬくもりと出会う五日間。</p>
         </header>
 
-        <section class="max-w-4xl mx-auto mb-16 text-center card">
-            <p class="text-xl sm:text-2xl leading-relaxed mb-8">
-                政策や補助金だけに頼らない、<span class="font-bold text-green-700">本質的な地域づくり。</span><br>
-                観光・教育・自然・産業を横断する<span class="font-bold text-green-700">実践型のカリキュラム。</span><br>
-                そして、将来的には<span class="font-bold text-green-700">国家資格化も視野に入れた挑戦。</span>
-            </p>
-            <p class="text-2xl sm:text-3xl italic font-medium text-gray-700 mb-6">
-                「風土を読み解き、価値に変え、未来へつなぐ」
-            </p>
-            <p class="text-xl sm:text-2xl leading-relaxed mt-4">
-                そんな人材を本気で育てるために、今この場をつくりました。
-            </p>
-        </section>
+        <main class="px-6 py-12 md:px-8 md:py-16">
 
-        <section class="max-w-4xl mx-auto mb-16 w-full card">
-            <h3 class="section-heading">
-                <span class="text-green-600">📍</span> 講座開催概要
-            </h3>
-            <ul class="text-lg sm:text-xl space-y-5 detail-list">
-                <li>
-                    <span class="font-semibold">講座名：</span>地域創生プロ育成《初級》講座
-                </li>
-                <li>
-                    <span class="font-semibold">形式：</span>オンライン講座（全4回）
-                </li>
-                <li>
-                    <span class="font-semibold">受講料：</span>無料（<span class="font-bold text-red-600">※テキスト代 5,000円</span>）
-                </li>
-                <li>
-                    <span class="font-semibold">募集枠：</span>全国100名限定（選考あり）
-                </li>
-                <li>
-                    <span class="font-semibold">今後の展開：</span>2級・1級への発展、国家資格化構想あり
-                </li>
-            </ul>
-        </section>
+            <!-- Invitation Section -->
+            <section id="invitation" class="mb-16">
+                 <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-2xl font-semibold text-green-900/90 mb-6">ご案内</h2>
+                    <div class="text-left leading-relaxed space-y-4 text-stone-700">
+                        <p>拝啓</p>
+                        <p>皆様におかれましては、ますますご清栄のこととお慶び申し上げます。</p>
+                        <p>さて、この度「第18回はればれ竹クラブ作品展」を開催する運びとなりました。今年も部員一同、心を込めて制作した竹工芸作品を多数展示いたします。皆様お誘い合わせの上、ぜひご来場ください。</p>
+                        <p>敬具</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Details Section -->
+            <section id="details" class="mb-16">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <!-- Date -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                        <span class="text-4xl">🗓️</span>
+                        <h3 class="text-xl font-semibold mt-4 mb-2 text-green-900">日時</h3>
+                        <p class="text-stone-600">2025年6月18日(水) 〜 22日(日)</p>
+                    </div>
+                    <!-- Time -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                        <span class="text-4xl">⏰</span>
+                        <h3 class="text-xl font-semibold mt-4 mb-2 text-green-900">開場時間</h3>
+                        <p class="text-stone-600">10:00 〜 17:00</p>
+                        <p class="text-sm text-stone-500 mt-1">※一部日程で時間が異なります</p>
+                    </div>
+                    <!-- Venue -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-stone-200">
+                        <span class="text-4xl">📍</span>
+                        <h3 class="text-xl font-semibold mt-4 mb-2 text-green-900">会場</h3>
+                        <p class="text-stone-600">あきる野市 中央公民館ギャラリー</p>
+                    </div>
+                </div>
+            </section>
 
-        <section class="max-w-4xl mx-auto mb-16 w-full card">
-            <h3 class="section-heading">
-                <span class="text-green-600">📢</span> 説明会 詳細
-            </h3>
-            <ul class="text-lg sm:text-xl space-y-5 detail-list">
-                <li>
-                    <span class="font-semibold">日時：</span><br>
-                    6月9日（月）20:00〜21:00<br>
-                    6月10日（火）20:00〜21:00<br>
-                    6月11日（水）20:00〜21:00
-                </li>
-                <li>
-                    <span class="font-semibold">形式：</span>Zoom（オンライン開催）／参加無料
-                </li>
-                <li>
-                    <span class="font-semibold">内容：</span>講座概要・カリキュラム・選考について・質疑応答
-                </li>
-            </ul>
-            <div class="text-center mt-12">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScBYX0o8bR2zPGZSD6E4EK3J2eqyXwQaSZu4tJp7xLvIU-sYQ/viewform"
-                   class="btn-primary inline-block text-lg sm:text-xl">
-                    🔗 参加申込はこちら（当日申込OK！）
-                </a>
-            </div>
-        </section>
+            <!-- Interactive Schedule Section -->
+            <section id="schedule" class="mb-16">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-2xl font-semibold text-green-900/90 mb-4">詳しい開場時間</h2>
+                    <p class="text-stone-600 mb-6">こちらでは、各曜日の詳しい開場時間をご確認いただけます。ご来場予定の日をクリックしてください。</p>
+                    <div id="day-selector" class="flex flex-wrap justify-center gap-3 mb-6">
+                        <button class="day-btn px-4 py-2 rounded-full border-2 border-stone-300 transition-colors duration-200 hover:bg-green-100 hover:border-green-200" data-time="11:00 に開場し、17:00 までとなります。">18日 (水)</button>
+                        <button class="day-btn px-4 py-2 rounded-full border-2 border-stone-300 transition-colors duration-200 hover:bg-green-100 hover:border-green-200" data-time="10:00 から 17:00 までとなります。">19日 (木)</button>
+                        <button class="day-btn px-4 py-2 rounded-full border-2 border-stone-300 transition-colors duration-200 hover:bg-green-100 hover:border-green-200" data-time="10:00 から 17:00 までとなります。">20日 (金)</button>
+                        <button class="day-btn px-4 py-2 rounded-full border-2 border-stone-300 transition-colors duration-200 hover:bg-green-100 hover:border-green-200" data-time="10:00 から 17:00 までとなります。">21日 (土)</button>
+                        <button class="day-btn px-4 py-2 rounded-full border-2 border-stone-300 transition-colors duration-200 hover:bg-green-100 hover:border-green-200" data-time="10:00 から 16:30 に終了します。">22日 (日)</button>
+                    </div>
+                    <div class="bg-green-50/70 border-l-4 border-green-700 p-4 rounded-r-lg">
+                        <p id="time-display" class="text-green-900 text-lg">日付を選択してください</p>
+                    </div>
+                </div>
+            </section>
 
-        <footer class="text-center max-w-2xl mx-auto mt-12 card">
-            <p class="text-xl sm:text-2xl leading-relaxed text-gray-800">
-                <span class="text-green-600">🌿</span><span class="font-bold">「地域を変えたい」と思ったその気持ちが、第一歩です。</span><br>
-                画面越しにお会いできるのを楽しみにしています！
-            </p>
+            <!-- Venue & Map Section -->
+            <section id="venue" class="mb-16">
+                <div class="max-w-2xl mx-auto text-center">
+                     <h2 class="text-2xl font-semibold text-green-900/90 mb-6">会場へのアクセス</h2>
+                     <p class="text-stone-600 mb-6">会場は「あきる野市 中央公民館」内のギャラリーです。皆様のお越しを心よりお待ちしております。</p>
+                     <div class="bg-white p-8 rounded-lg shadow-sm border border-stone-200">
+                        <p class="text-2xl font-bold text-stone-800">あきる野市 中央公民館ギャラリー</p>
+                        <p class="text-stone-500 mt-2">〒197-0804 東京都あきる野市秋川１丁目８</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=あきる野市中央公民館" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 bg-green-800 text-white font-bold py-3 px-8 rounded-lg hover:bg-green-900 transition-colors duration-200 shadow">
+                            地図で場所を確認する
+                        </a>
+                     </div>
+                </div>
+            </section>
+
+             <!-- Gallery Teaser -->
+            <section id="gallery-teaser">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-2xl font-semibold text-green-900/90 mb-4">作品の雰囲気</h2>
+                    <p class="text-stone-600 mb-8">会場では、伝統的な技法から現代的な感性の作品まで、様々な竹工芸をご覧いただけます。写真はイメージです。</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                         <div class="aspect-w-1 aspect-h-1"><img src="http://harebaretakekurabu.r-cms.jp/files/user/201801211053_3.jpg" alt="[Image of 竹かご]" class="rounded-lg object-cover w-full h-full"></div>
+                         <div class="aspect-w-1 aspect-h-1"><img src="http://harebaretakekurabu.r-cms.jp/files/user/201801211053_1-263x401.jpg" alt="[Image of 竹細工]" class="rounded-lg object-cover w-full h-full"></div>
+                         <div class="aspect-w-1 aspect-h-1"><img src="https://harebaretakekurabu.r-cms.jp/files/user/201801211053_2.jpg" alt="[Image of 竹製花器]" class="rounded-lg object-cover w-full h-full"></div>
+                         <div class="aspect-w-1 aspect-h-1"><img src="https://harebaretakekurabu.r-cms.jp/files/user/201801211045_3-284x401.jpg" alt="[Image of 竹のオブジェ]" class="rounded-lg object-cover w-full h-full"></div>
+                         <div class="aspect-w-1 aspect-h-1"><img src="https://harebaretakekurabu.r-cms.jp/files/user/201801211045_4.jpg" alt="[Image of 竹の壁飾り]" class="rounded-lg object-cover w-full h-full"></div>
+                         <div class="aspect-w-1 aspect-h-1"><img src="https://harebaretakekurabu.r-cms.jp/files/user/201801211028_2-278x384.jpg" alt="[Image of 竹編みの皿]" class="rounded-lg object-cover w-full h-full"></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center py-8 bg-stone-100 border-t border-stone-200">
+            <p class="text-stone-500">皆様のご来場を、はればれ竹クラブ部員一同、心よりお待ちしております。</p>
         </footer>
 
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dayButtons = document.querySelectorAll('.day-btn');
+            const timeDisplay = document.getElementById('time-display');
+            
+            dayButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    dayButtons.forEach(btn => btn.classList.remove('active-day'));
+                    
+                    button.classList.add('active-day');
+                    
+                    const timeInfo = button.getAttribute('data-time');
+                    const dayText = button.textContent;
+                    timeDisplay.textContent = `選択した ${dayText} は ${timeInfo}`;
+                });
+            });
+
+            if (dayButtons.length > 0) {
+                dayButtons[0].click();
+            }
+        });
+    </script>
 </body>
 </html>
